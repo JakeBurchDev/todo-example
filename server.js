@@ -4,14 +4,25 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mySQLCredentials = require('./mysql-credentials');
 const { database, username, password } = mySQLCredentials;
-const { Sequelize } = require('sequelize');
+const { Sequelize, Model, DataTypes } = require('sequelize');
 const sequelize = new Sequelize(database, username, password, {
     host: 'localhost',
     dialect: 'mysql'
-  });
+});
 
 app.use(bodyParser.json());
 app.use(cors());
+
+class ToDo extends Model {}
+ToDo.init({
+    id: {
+        type: DataTypes.INTEGER(11),
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    text: DataTypes.STRING
+}, { sequelize, modelName: 'todo' });
 
 // create todo
 app.route('/api/todo').post((req, res) => {});
@@ -28,9 +39,6 @@ app.route('/api/todo/:id').put((req, res) => {});
 // delete todo with id
 app.route('/api/todo/:id').delete((req, res) => {});
 
-app.listen(8080, () => {
-    console.log('server running at http://localhost:8080');
-    sequelize.authenticate().then(response => {
-        console.log('MySQL Connection has been established successfully.');
-    });
+sequelize.sync().then(() => {
+    app.listen(8080, () => console.log('server running at http://localhost:8080'));
 });
