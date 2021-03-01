@@ -18,10 +18,6 @@ export class ToDoService {
     return this.http.get<any>(`${apiURL}/todo`);
   }
 
-  getToDo(id: number): Observable<ToDo> {
-    return this.http.get<any>(`${apiURL}/ToDos/${id}`);
-  }
-
   updateToDo(toDo: ToDo): Observable<void> {
     return this.http.put<any>(`${apiURL}/todo`, toDo);
   }

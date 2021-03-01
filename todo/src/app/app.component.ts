@@ -32,16 +32,10 @@ export class AppComponent implements OnInit {
     });
   }
 
-  getToDoById() {
-
-  }
-
-  completeToDo() {
-
-  }
-
-  updateToDoText() {
-    
+  setToDoCompletion(id, isDone) {
+    const selectedToDo = this.toDos.find(toDo => toDo.id === id);
+    selectedToDo.isDone = isDone;
+    this.toDoService.updateToDo(selectedToDo).subscribe(() => this.getCurrentToDos()); 
   }
 
   deleteToDo(id) {

@@ -34,6 +34,10 @@
   font-family: 'RocknRoll One', sans-serif;
 }
 
+:host .content-top h1 i {
+  margin-right: 1em;
+}
+
 :host .content-top .todo-container {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -58,12 +62,15 @@
   margin-bottom: 0;
 }
 
+:host .content-top .todo-container .todo.is-done span {
+  text-decoration: line-through;
+}
+
 :host .content-top .todo-container .todo span {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 0 1em;
-  font-weight: medium;
   font-weight: 600;
 }
 

@@ -37,16 +37,11 @@ app.route('/api/todo').get((req, res) => {
     ToDo.findAll().then(toDos => res.send(toDos));
 });
 
-// get todo with id
-app.route('/api/todo/:id').get((req, res) => {
-    ToDo.findByPk(req.params.id).then(toDo => res.send(toDo));
-});
-
 // update todo with id
 app.route('/api/todo').put((req, res) => {
-    const { id, text } = req.body; 
+    const { id, isDone } = req.body; 
     const selectedToDo = ToDo.findByPk(id);
-    selectedToDo.text = text;
+    selectedToDo.isDone = isDone;
     ToDo.update(selectedToDo, { where: { id } }).then(() => res.send({ success: 'true' }));
 });
 

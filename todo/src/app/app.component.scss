@@ -19,6 +19,10 @@
         h1 {
             margin-top: 0;
             font-family: 'RocknRoll One', sans-serif;
+
+            i {
+                margin-right: 1em;
+            }
         }
         
         .todo-container {
@@ -36,11 +40,14 @@
                 &:last-child {
                     margin-bottom: 0;
                 }
+
+                &.is-done span {
+                    text-decoration: line-through;
+                }
         
                 span {
                     flex: 1;
                     padding: 0 1em;
-                    font-weight: medium;
                     font-weight: 600;
                 }
         

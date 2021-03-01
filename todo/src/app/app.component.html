@@ -1,9 +1,9 @@
 <div class="content-top"> 
-<h1>My ToDo List</h1>
+<h1><i class="fas fa-list"></i>My ToDo List</h1>
   <div class="todo-container">
-    <div *ngFor="let toDo of toDos" class="todo">
+    <div *ngFor="let toDo of toDos" class="todo" [class.is-done]="toDo.isDone">
       <i class="far fa-square" *ngIf="!toDo.isDone" (click)="setToDoCompletion(toDo.id, true)"></i>
-      <i class="far fa-check" *ngIf="toDo.isDone" (click)="setToDoCompletion(toDo.id, false)"></i>
+      <i class="fas fa-check" *ngIf="toDo.isDone" (click)="setToDoCompletion(toDo.id, false)"></i>
       <span>{{ toDo.text }}</span>
       <i class="far fa-trash-alt remove-todo" (click)="deleteToDo(toDo.id)"></i>
     </div>
