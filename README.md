@@ -2,7 +2,7 @@
  ToDo app created to provide code sample.
  
 ## Overview
-This app is build with MySQL, Express, Angular, and Node. It allows a user to enter ToDo items, mark them as complete, and delete them.
+This app is built with MySQL, Express, Angular, and Node. It allows a user to enter ToDo items, mark them as complete, and delete them.
 
 ## Setup
 Complete the following to run the application:
