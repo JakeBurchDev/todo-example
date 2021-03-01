@@ -1,0 +1,113 @@
+:host {
+  width: calc(100vw - 2em);
+  height: calc(100vh - 2em);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#d34f3c), to(#c43d5c));
+  background-image: linear-gradient(to bottom right, #d34f3c, #c43d5c);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  font-family: 'Open Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+:host .content-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+  margin-bottom: 1em;
+}
+
+:host .content-top h1 {
+  margin-top: 0;
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+:host .content-top .todo-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-y: auto;
+}
+
+:host .content-top .todo-container .todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 2px;
+  background: #f2f2f2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+:host .content-top .todo-container .todo:last-child {
+  margin-bottom: 0;
+}
+
+:host .content-top .todo-container .todo span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 1em;
+  font-weight: medium;
+  font-weight: 600;
+}
+
+:host .content-top .todo-container .todo i {
+  cursor: pointer;
+}
+
+:host .content-top .todo-container .todo i.remove-todo {
+  color: #b51414;
+}
+
+:host .content-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+:host .content-bottom input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1em;
+  border: none;
+  border-radius: 2px 0 0 2px;
+}
+
+:host .content-bottom button {
+  padding: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  -webkit-transition: 200ms ease-in-out all;
+  transition: 200ms ease-in-out all;
+  background: #0a8d9d;
+  color: #fff;
+}
+
+:host .content-bottom button:hover {
+  color: #0a8d9d;
+  background: #fff;
+}
+
+:host .content-bottom button i {
+  margin-right: 1em;
+}
+/*# sourceMappingURL=app.component.css.map */

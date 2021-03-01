@@ -19,7 +19,8 @@ ToDo.init({
         primaryKey: true,
         autoIncrement: true
     },
-    text: DataTypes.STRING
+    text: DataTypes.STRING,
+    isDone: DataTypes.BOOLEAN
 }, { sequelize, modelName: 'todo' });
 
 app.use(bodyParser.json());

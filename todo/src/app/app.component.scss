@@ -1,0 +1,88 @@
+:host {
+    width: calc(100vw - 2em);
+    height: calc(100vh - 2em);
+    background-image: linear-gradient(to bottom right, #d34f3c, #c43d5c);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+
+    .content-top {
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        margin-bottom: 1em;
+    
+        h1 {
+            margin-top: 0;
+            font-family: 'RocknRoll One', sans-serif;
+        }
+        
+        .todo-container {
+            flex: 1;
+            overflow-y: auto;
+
+            .todo {
+                display: flex;
+                margin-bottom: 1em;
+                padding: 1em;
+                border-radius: 2px;
+                background: #f2f2f2;
+                align-items: center;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+        
+                span {
+                    flex: 1;
+                    padding: 0 1em;
+                    font-weight: medium;
+                    font-weight: 600;
+                }
+        
+                i {
+                    cursor: pointer;
+        
+                    &.remove-todo {
+                        color: #b51414;
+                    }
+                }
+            }
+        }
+    }
+
+    .content-bottom {
+        display: flex;
+
+        input {
+            flex: 1;
+            padding: 1em;
+            border: none;
+            border-radius: 2px 0 0 2px;
+        }
+
+        button {
+            padding: 1em;
+            font-weight: 600;
+            border: none;
+            border-radius: 0 2px 2px 0;
+            cursor: pointer;
+            transition: 200ms ease-in-out all;
+            background: #0a8d9d;
+            color: #fff;
+
+            &:hover {
+                color: #0a8d9d;
+                background: #fff;
+            }
+
+            i {
+                margin-right: 1em;
+            }
+        }
+    }
+}

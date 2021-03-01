@@ -36,8 +36,12 @@ export class AppComponent implements OnInit {
 
   }
 
-  updateToDo() {
+  completeToDo() {
 
+  }
+
+  updateToDoText() {
+    
   }
 
   deleteToDo(id) {

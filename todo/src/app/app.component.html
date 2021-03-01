@@ -1,4 +1,15 @@
+<div class="content-top"> 
 <h1>My ToDo List</h1>
-<p *ngFor="let toDo of toDos">{{ toDo.text }}<span (click)="deleteToDo(toDo.id)">&nbsp;<u><b>x</b></u></span></p>
-<input type="text" [(ngModel)]="newToDoText">
-<button type="button" (click)="addToDo()">Add ToDo</button>
+  <div class="todo-container">
+    <div *ngFor="let toDo of toDos" class="todo">
+      <i class="far fa-square" *ngIf="!toDo.isDone" (click)="setToDoCompletion(toDo.id, true)"></i>
+      <i class="far fa-check" *ngIf="toDo.isDone" (click)="setToDoCompletion(toDo.id, false)"></i>
+      <span>{{ toDo.text }}</span>
+      <i class="far fa-trash-alt remove-todo" (click)="deleteToDo(toDo.id)"></i>
+    </div>
+  </div>
+</div>
+<div class="content-bottom">
+  <input type="text" [(ngModel)]="newToDoText">
+  <button type="button" (click)="addToDo()"><i class="fas fa-plus"></i>Add ToDo</button>
+</div>
