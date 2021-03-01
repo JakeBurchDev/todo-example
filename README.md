@@ -1,5 +1,5 @@
 # todo-example
- ToDo app created to provide code sample.
+ToDo app created to provide a code sample.
  
 ## Overview
 This app is built with MySQL, Express, Angular, and Node. It allows a user to enter ToDo items, mark them as complete, and delete them.
