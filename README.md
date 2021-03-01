@@ -1,10 +1,10 @@
 # todo-example
  ToDo app created to provide code sample.
  
-##Overview
+## Overview
 This app is build with MySQL, Express, Angular, and Node. It allows a user to enter ToDo items, mark them as complete, and delete them.
 
-##Setup
+## Setup
 Complete the following to run the application:
 1. Create a new MySQL database with the name 'todo'
 2. Run npm install from the root directory
